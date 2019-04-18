@@ -5,18 +5,51 @@
 # @file: test.py
 # @time: 2018/12/23 14:44
 
-import itertools
+
+class VoiceCommand:
+    def __init__(self, channels):
+        self.channels = channels
+        self.index = 0
+
+    def first_channel(self):
+        return self.channels[self.index]
+
+    def last_channel(self):
+        self.index = len(self.channels) - 1
+        return self.channels[-1]
+
+    def turn_channel(self, N):
+        self.index = N - 1
+        return self.channels[self.index]
+
+    def next_channel(self):
+        self.index = (self.index + 1) % len(self.channels)
+        return self.channels[self.index]
+
+    def previous_channel(self):
+        self.index -= 1
+        return self.channels[self.index]
+
+    def current_channel(self):
+        return self.channels[self.index]
+
+    def is_exist(self, m):
+        if isinstance(m, int) and 0 < m < len(self.channels):
+            return "Yes"
+        elif isinstance(m, str) and m in self.channels:
+            return "Yes"
+        else:
+            return "No"
 
 
-d = ["acb", "bd", "zwa"]
-b = True
-while b:
-    ts = itertools.permutations(d, 2)
-    for t in ts:
-        if t[0][-1] == t[1][0]:
-            d.append(t[0] + t[1][1:])
-            d.remove(t[0])
-            d.remove(t[1])
-            break
+if __name__ == '__main__':
+    # These "asserts" using only for self-checking and not necessary for auto-testing
 
-print(d)
+    CHANNELS = ['BBC', 'Discovery', 'NickMusic', 'MTV']
+
+    controller = VoiceCommand(CHANNELS)
+
+    controller.previous_channel()
+    controller.previous_channel()
+    print(controller.current_channel())
+    print("Coding complete? Let's try tests!")

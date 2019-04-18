@@ -33,7 +33,7 @@ def checkio(data):
     return ""
 
 
-#These "asserts" using only for self-checking and not necessary for auto-testing
+# These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     assert checkio(["acb", "bd", "zwa"]) == "zwacbd", \
         "Just concatenate it"

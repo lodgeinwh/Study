@@ -1,4 +1,4 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author: lodge
 # @license: (C) Copyright 2013-2018, Node Supply Chain Manager Corporation Limited.
@@ -19,6 +19,7 @@ if __name__ == '__main__':
     def almost_equal(checked, correct, significant_digits):
         precision = 0.1 ** significant_digits
         return correct - precision < checked < correct + precision
+
 
     assert almost_equal(checkio(1, 2, 3), 2, 3), "3-1=2"
     assert almost_equal(checkio(5, -5), 10, 3), "5-(-5)=10"

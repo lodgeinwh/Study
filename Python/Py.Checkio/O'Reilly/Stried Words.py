@@ -1,14 +1,5 @@
-# !/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# @author: Lodgeinwh
-# @file: Stried Words.py
-# @time: 2019/03/14 22:15:20
-# @contact: lodgeinwh@gmail.com
-# @version: 1.0
-
 VOWELS = "AEIOUY"
 CONSONANTS = "BCDFGHJKLMNPQRSTVWXZ"
-
 
 def checkio(text):
     import string
@@ -20,15 +11,14 @@ def checkio(text):
             text = text.replace(i, 'v')
         elif i in CONSONANTS:
             text = text.replace(i, 'c')
-    text = text.strip().split(' ')
-
-    count = 0
-    for s in text:
-        if len(s) > 1 and s.isalpha():
-            if s.find('vv') == -1 and s.find('cc') == -1:
-                count += 1
-    return count
-
+	text = text.strip().split(' ')
+	
+	count = 0
+	for string in text:
+		if len(string) > 1 and string.isalpha():
+			if 'vv' not in string and 'cc' not in string:
+				count += 1
+	return count
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':

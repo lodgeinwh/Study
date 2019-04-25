@@ -1,44 +1,42 @@
-# !/usr/bin/env python3
-# -*- encoding: utf-8 -*-
-# @Author: lodge
-# @Contact: lodgeinwh@gmail.com
-# @File: Probably Dice.py
-# @Time: 2019/2/12 0:06
-# @Software: PyCharm
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @author: Lodgeinwh
+# @file: Probably Dice
+# @time: 2019-02-12 9:47
+# @contact: lodgeinwh@gmail.com
 
 
 def probability(dice_number, sides, target):
-    if target < dice_number or target > dice_number * sides:
+    if target > dice_number * sides or target < dice_number:
         return 0
 
-    res = [[1] * sides]
+    result = [[1] * sides,]
     for i in range(1, dice_number):
         x = (sides - 1) * (i + 1) + 1
-        res.append([0] * x)
+        result.append([0] * x)
 
         for j in range(x):
             if j < sides:
-                res[i][j] = (sum(res[i - 1][0:j + 1]))
+                result[i][j] = (sum(result[i - 1][0:j + 1]))
             elif sides <= j <= x // 2:
-                res[i][j] = (sum(res[i - 1][j - sides + 1:j + 1]))
+                result[i][j] = (sum(result[i - 1][j - sides + 1:j + 1]))
             else:
                 break
         left = 0
-        right = len(res[i]) - 1
+        right = len(result[i]) - 1
         while left <= right:
-            res[i][right] = res[i][left]
+            result[i][right] = result[i][left]
             left += 1
             right -= 1
 
-    result = res[-1]
-    all = sum(result)
+    res = result[-1]
+    all = sum(res)
     other = []
-    for i, item in enumerate(result):
+    for i, item in enumerate(res):
         pro = item / all
         other.append([dice_number + i, pro])
 
-    return round(other[target - dice_number][1], 4)
-
+    return round(other[target-dice_number][1], 4)
 
 if __name__ == '__main__':
     # These are only used for self-checking and are not necessary for auto-testing

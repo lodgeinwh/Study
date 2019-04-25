@@ -1,10 +1,5 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @author: Lodgeinwh
-# @file: p4_4.py
-# @time: 2019/03/14 22:49:17
-# @contact: lodgeinwh@gmail.com
-# @version: 1.0
 
 
 bingo = '我是帅哥'

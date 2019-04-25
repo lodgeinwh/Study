@@ -1,10 +1,5 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @author: Lodgeinwh
-# @file: p3_1.py
-# @time: 2019/03/14 22:48:39
-# @contact: lodgeinwh@gmail.com
-# @version: 1.0
 
 
 """---第一个小游戏升级版---"""

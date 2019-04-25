@@ -1,4 +1,4 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author: lodge
 # @license: (C) Copyright 2013-2018, Node Supply Chain Manager Corporation Limited.
@@ -27,6 +27,4 @@ if __name__ == '__main__':
     assert checkio("1 2 3 4") == False, "Digits"
     assert checkio("bla bla bla bla") == True, "Bla Bla"
     assert checkio("Hi") == False, "Hi"
-    print(
-        "Coding complete? Click 'Check' to review your tests and earn cool rewards!"
-    )
+    print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")

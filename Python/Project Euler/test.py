@@ -7,6 +7,4 @@
 # @time: 2018/12/23 14:36
 
 
-string = 'Hello World'
-print(string[::-1])
-
+print('Hello World!')

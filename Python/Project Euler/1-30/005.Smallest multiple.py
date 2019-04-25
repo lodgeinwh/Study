@@ -1,10 +1,5 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @author: Lodgeinwh
-# @file: 005.Smallest multiple.py
-# @time: 2019/03/14 21:51:03
-# @contact: lodgeinwh@gmail.com
-# @version: 1.0
 
 
 def zdgys(x, y):  # 求最大公约数

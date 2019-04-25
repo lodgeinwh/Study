@@ -1,10 +1,9 @@
-# !/usr/bin/env python3
-# -*- encoding: utf-8 -*-
-# @Author: lodge
-# @Contact: lodgeinwh@gmail.com
-# @File: Roman Numerals.py
-# @Time: 2019/2/12 21:48
-# @Software: PyCharm
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @author: Lodgeinwh
+# @file: Roman Numerals
+# @time: 2019-02-01 9:52
+# @contact: lodgeinwh@gmail.com
 
 
 def checkio(data):

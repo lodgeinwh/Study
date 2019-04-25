@@ -1,54 +1,58 @@
 # !/usr/bin/env python3
-# -*- encoding: utf-8 -*-
-# @Author: lodge
-# @Contact: lodgeinwh@gmail.com
-# @File: Army Battles.py
-# @Time: 2019/2/17 0:25
-# @Software: PyCharm
-
-# Taken from mission The Warriors
+# -*- coding: utf-8 -*-
+# @author: Lodgeinwh
+# @file: Army Battles.py
+# @time: 2019/04/22 13:25:44
+# @contact: lodgeinwh@gmail.com
+# @version: 1.0
 
 
-class Army:
-    def __init__(self):
-        self.army = []
-
-    def add_units(self, soldier, nums):
-        for _ in range(nums):
-            self.army.append(soldier())
-
-
-class Warrior:
+class Warrior():
     def __init__(self):
         self.health = 50
-        self.attack = 5
+        self.damage = 5
 
     @property
     def is_alive(self):
         return self.health > 0
 
+    def do_hit(self, enemy1):
+        enemy1.health -= self.damage
+
 
 class Knight(Warrior):
     def __init__(self):
         super().__init__()
-        self.attack = 7
+        self.damage = 7
 
 
-class Battle:
-    def fight(self, army1, army2):
-        while army1.army and army2.army:
-            if fight(army1.army[0], army2.army[0]):
-                army2.army.pop(0)
+class Army():
+    def __init__(self,):
+        self.army = []
+
+    def add_units(self, soldier, number):
+        for i in range(number):
+            self.army.append(soldier())
+
+
+class Battle():
+    def fight(self, army_1, army_2):
+        while army_1.army and army_2.army:
+            if fight(army_1.army[0], army_2.army[0]):
+                army_2.army.pop(0)
             else:
-                army1.army.pop(0)
-        return True if army1.army else False
+                army_1.army.pop(0)
+        return True if army_1.army else False
 
 
 def fight(unit_1, unit_2):
     while unit_1.is_alive and unit_2.is_alive:
-        unit_2.health -= unit_1.attack
-        if unit_2.is_alive:
-            unit_1.health -= unit_2.attack
+        unit_1.do_hit(unit_2)
+        if not unit_2.is_alive:
+            break
+        unit_2.do_hit(unit_1)
+        if not unit_1.is_alive:
+            break
     return unit_1.is_alive
 
 
@@ -94,14 +98,14 @@ if __name__ == '__main__':
     # battle tests
     my_army = Army()
     my_army.add_units(Knight, 3)
-
+    
     enemy_army = Army()
     enemy_army.add_units(Warrior, 3)
 
     army_3 = Army()
     army_3.add_units(Warrior, 20)
     army_3.add_units(Knight, 5)
-
+    
     army_4 = Army()
     army_4.add_units(Warrior, 30)
 

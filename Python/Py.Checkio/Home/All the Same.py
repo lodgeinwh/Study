@@ -1,4 +1,4 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author: lodgeinwh
 # @license: (C) Copyright 2013-2018, Node Supply Chain Manager Corporation Limited.

@@ -1,10 +1,5 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @author: Lodgeinwh
-# @file: 001.Multiples of 3 and 5.py
-# @time: 2019/03/14 21:50:36
-# @contact: lodgeinwh@gmail.com
-# @version: 1.0
 
 sums = 0
 for i in range(1000):

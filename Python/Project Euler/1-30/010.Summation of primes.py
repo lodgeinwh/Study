@@ -1,10 +1,5 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# @author: Lodgeinwh
-# @file: 010.Summation of primes.py
-# @time: 2019/03/14 21:51:49
-# @contact: lodgeinwh@gmail.com
-# @version: 1.0
 
 
 def primes(N):
@@ -20,6 +15,5 @@ def primes(N):
             if flag[p] == 1:
                 break
     return prime
-
 
 print(sum(primes(2000000)))

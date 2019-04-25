@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author: lodgeinwh
 # @license: (C) Copyright 2013-2018, Node Supply Chain Manager Corporation Limited.
@@ -16,9 +16,9 @@ def checkio(data):
     result = result1 and result2 and result3 and result4 and result5
     return result
 
-
 # Some hints
 # Just check all conditions
+
 
 if __name__ == '__main__':
     # These "asserts" using only for self-checking and not necessary for auto-testing
@@ -28,6 +28,4 @@ if __name__ == '__main__':
     assert checkio('QWERTYqwerty') == False, "4th example"
     assert checkio('123456123456') == False, "5th example"
     assert checkio('QwErTy911poqqqq') == True, "6th example"
-    print(
-        "Coding complete? Click 'Check' to review your tests and earn cool rewards!"
-    )
+    print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")

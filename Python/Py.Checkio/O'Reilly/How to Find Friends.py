@@ -14,6 +14,7 @@ def check_connection(network, first, second):
             couple = set(j.split('-'))
             if connect & couple:
                 connect.update(couple)
+    print(connect)
     return second in connect
 
 

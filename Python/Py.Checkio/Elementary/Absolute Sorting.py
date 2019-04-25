@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author: lodge
 # @license: (C) Copyright 2013-2018, Node Supply Chain Manager Corporation Limited.
@@ -17,7 +17,6 @@ if __name__ == '__main__':
         if not isinstance(array, (list, tuple)):
             raise TypeError("The result should be a list or tuple.")
         return list(array)
-
 
     assert check_it(checkio((-20, -5, 10, 15))) == [-5, 10, 15, -20], "Example"  # or (-5, 10, 15, -20)
     assert check_it(checkio((1, 2, 3, 0))) == [0, 1, 2, 3], "Positive numbers"

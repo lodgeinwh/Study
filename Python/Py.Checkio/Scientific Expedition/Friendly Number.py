@@ -23,7 +23,6 @@ def friendly_number(number, base=1000, decimals=0, suffix='',
     return result if number >= 0 else '-' + result
 
 
-
 # These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     assert friendly_number(102) == '102', '102'

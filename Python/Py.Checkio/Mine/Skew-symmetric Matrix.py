@@ -38,4 +38,4 @@ if __name__ == '__main__':
         [0, 1, 2],
         [-1, 0, 1],
         [-3, -1, 0]]) == False, "3rd example"
-    print("Coding complete? Click 'Check' to earn cool rewards!");
+    print("Coding complete? Click 'Check' to earn cool rewards!")

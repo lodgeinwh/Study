@@ -21,7 +21,7 @@ def checkio(lines):
                 start += off
         return True
 
-    return sum(has_square(p, n+1) for n in range(3) for p in points[n])
+    return sum(has_square(p, n + 1) for n in range(3) for p in points[n])
 
 
 if __name__ == '__main__':

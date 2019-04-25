@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @author: lodge
 # @license: (C) Copyright 2013-2018, Node Supply Chain Manager Corporation Limited.
@@ -19,8 +19,9 @@ def non_repeat(line):
             result = temp
     return result
 
+
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     assert non_repeat('aaaaa') == 'a', "First"
     assert non_repeat('abdjwawk') == 'abdjw', "Second"
     assert non_repeat('abcabcffab') == 'abcf', "Third"

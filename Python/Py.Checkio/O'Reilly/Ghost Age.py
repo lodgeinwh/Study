@@ -1,19 +1,28 @@
+# !/usr/bin/env python
+# -*- encoding: utf-8 -*-
+# @author: Lodgeinwh
+# @file: Ghost Age.py
+# @time: 2019/04/25 23:26:13
+# @contact: lodgeinwh@gmail.com
+# @version: 1.0
+
+
 def checkio(opacity):
-	fab = [0, 1]
-	while fab[-1] < 10000:
-		fab.append(fab[-1] + fab[-2])
-	age = 0
-	result = 10000
-	while opacity != result:
-		age += 1
-		if age in fab:
-			result -= age
-		else:
-			result += 1
-	return age
-	
-	
-#These "asserts" using only for self-checking and not necessary for auto-testing
+    fab = [0, 1]
+    while fab[-1] < 10000:
+        fab.append(fab[-1] + fab[-2])
+    age = 0
+    result = 10000
+    while opacity != result:
+        age += 1
+        if age in fab:
+            result -= age
+        else:
+            result += 1
+    return age
+
+
+# These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     assert checkio(10000) == 0, "Newborn"
     assert checkio(9999) == 1, "1 year"

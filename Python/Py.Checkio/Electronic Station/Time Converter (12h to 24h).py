@@ -15,9 +15,10 @@ def time_converter(time):
     if daytime[0] == '12' and daynoon == 'p.m.':
         return time.split(' ')[0]
     if daynoon == 'p.m.':
-        return str(int(daytime[0])+12).rjust(2, '0')+':'+daytime[1]
+        return str(int(daytime[0]) + 12).rjust(2, '0') + ':' + daytime[1]
     if daynoon == 'a.m.':
-        return str(int(daytime[0])).rjust(2, '0')+':'+daytime[1]
+        return str(int(daytime[0])).rjust(2, '0') + ':' + daytime[1]
+
 
 if __name__ == '__main__':
     print("Example:")

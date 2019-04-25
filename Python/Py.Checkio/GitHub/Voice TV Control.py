@@ -49,13 +49,14 @@ class VoiceCommand:
         else:
             return "No"
 
+
 if __name__ == '__main__':
     # These "asserts" using only for self-checking and not necessary for auto-testing
 
     CHANNELS = ["BBC", "Discovery", "TV1000"]
 
     controller = VoiceCommand(CHANNELS)
-    
+
     assert controller.first_channel() == "BBC"
     assert controller.last_channel() == "TV1000"
     assert controller.turn_channel(1) == "BBC"

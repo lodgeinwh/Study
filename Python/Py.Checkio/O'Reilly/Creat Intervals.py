@@ -1,3 +1,12 @@
+# !/usr/bin/env python
+# -*- encoding: utf-8 -*-
+# @author: Lodgeinwh
+# @file: Creat Intervals.py
+# @time: 2019/04/25 23:23:33
+# @contact: lodgeinwh@gmail.com
+# @version: 1.0
+
+
 def create_intervals(data):
     return list(zip(sorted(x for x in data if x - 1 not in data), sorted(x for x in data if x + 1 not in data)))
 

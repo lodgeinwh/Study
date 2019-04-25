@@ -61,7 +61,7 @@ if __name__ == '__main__':
     print("Example:")
     print(morse_decoder('... --- ...'))
 
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     assert morse_decoder("... --- -- .   - . -..- -") == "Some text"
     assert morse_decoder("..--- ----- .---- ---..") == "2018"
     assert morse_decoder(

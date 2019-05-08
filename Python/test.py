@@ -6,4 +6,4 @@
 # @contact: lodgeinwh@gmail.com
 # @version: 1.0
 
-print(int(-1))
+print(1000000 ** 0.5)

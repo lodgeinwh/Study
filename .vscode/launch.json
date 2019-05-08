@@ -65,6 +65,19 @@
             "request": "launch",
             "program": "${file}",
             "console": "externalTerminal"
-        }
+        },
+        {
+            "name": "Launch localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost/mypage.html",
+            "webRoot": "${workspaceFolder}/wwwroot"
+        },
+        {
+            "name": "Launch index.html",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${file}"
+        },
     ]
 }

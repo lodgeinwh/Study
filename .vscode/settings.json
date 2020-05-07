@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "d:\\Workspace\\Study\\.virtualenvs\\.venv\\Scripts\\python.exe",
+    "python.pythonPath": "d:\\Workspace\\Study\\.virtualenvs\\.venv382\\Scripts\\python.exe",
     "python.venvPath": "${workspaceFolder}\\.virtualenvs",
     "python.venvFolders": [
         "envs",

@@ -8,4 +8,5 @@
         ".venv"
     ],
     "git.ignoreLimitWarning": true,
+    "editor.fontFamily": "Source Code",
 }
